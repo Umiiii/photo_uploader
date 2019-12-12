@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2P-mf-VkI">
+                                <rect key="frame" x="169" y="450" width="92" height="30"/>
+                                <state key="normal" title="隐式获取相册"/>
+                                <connections>
+                                    <action selector="implicitlyRetrievePhotoLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SX0-oJ-1Ic"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ja3-O5-ika">
+                                <rect key="frame" x="87" y="135" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="5XJ-3r-7mY"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atr-ez-OM2">
+                                <rect key="frame" x="153" y="606" width="108" height="30"/>
+                                <state key="normal" title="清除"/>
+                                <connections>
+                                    <action selector="clearPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7g-G2-0m9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oe9-Pz-Q5C">
+                                <rect key="frame" x="169" y="359" width="92" height="30"/>
+                                <state key="normal" title="显式获取相册"/>
+                                <connections>
+                                    <action selector="explicitlyRetrievePhotoLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zDh-TL-FYh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X2P-mf-VkI" secondAttribute="trailing" constant="153" id="4ac-yW-QLa"/>
+                            <constraint firstItem="atr-ez-OM2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Yc-96-Lhn"/>
+                            <constraint firstItem="X2P-mf-VkI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Oe9-Pz-Q5C" secondAttribute="trailing" constant="-92" id="L0E-dA-jVf"/>
+                            <constraint firstItem="atr-ez-OM2" firstAttribute="centerX" secondItem="Ja3-O5-ika" secondAttribute="centerX" id="b54-fW-AnT"/>
+                            <constraint firstItem="Ja3-O5-ika" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="d0U-68-sYL"/>
+                            <constraint firstItem="Oe9-Pz-Q5C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="eBO-QP-vVw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="atr-ez-OM2" secondAttribute="bottom" constant="226" id="fIA-n3-e4A"/>
+                            <constraint firstItem="Oe9-Pz-Q5C" firstAttribute="top" secondItem="Ja3-O5-ika" secondAttribute="bottom" constant="96" id="gbD-yV-GNU"/>
+                            <constraint firstItem="Oe9-Pz-Q5C" firstAttribute="bottom" secondItem="X2P-mf-VkI" secondAttribute="bottom" constant="-91" id="hWU-j6-mou"/>
+                            <constraint firstItem="atr-ez-OM2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="uVY-0L-dtD"/>
+                            <constraint firstItem="Ja3-O5-ika" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="usY-UC-BiS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Ja3-O5-ika" id="cLO-hb-z2t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>
